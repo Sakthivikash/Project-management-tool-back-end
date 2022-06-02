@@ -52,12 +52,12 @@ export async function CreateNewTask(req, res) {
 
 //Update Task:
 export async function updateTask(req, res) {
-  const id = req.params.id;
+  const _id = req.params.id;
   const { task, prograss } = req.body;
 
   try {
-    let taskUpdate = await Task.findOneAndUpdate(
-      { id },
+    let taskUpdate = await Task.findByIdAndUpdate(
+      { _id },
       { $set: { task, prograss } }
     );
     return res
