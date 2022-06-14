@@ -8,11 +8,9 @@ const userSchema = new Schema({
   },
   job: {
     type: String,
-    required: true,
   },
   institution: {
     type: String,
-    required: true,
   },
   email: {
     type: String,
